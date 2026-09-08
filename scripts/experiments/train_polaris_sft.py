@@ -1,0 +1,27 @@
+ENTRYPOINT = 'lmpo.core.sft'
+
+CONFIG = {
+    'wandb_name': 'sft',
+    'model_dir': '/gcs/jaxconverted/Qwen3-4B/',
+    'env.env_name': 'polaris_acemath',
+    'env.env_nickname': 'polaris-boxed-sft',
+    'env.enable_thinking': 0,
+    'env.prompt_length': 2048,
+    'env.tokens_per_action': 8192,
+    'train.global_batch': 128,
+    'train.microbatch': 8,
+    'train.logit_chunks': 4,
+    'train.lr': 5e-6,
+    'train.tp_size': 4,
+    'train.train_vocab': 0,
+    'train.val_fraction': 0.1,
+    'train.val_batches': 2,
+    'train.val_interval': 10,
+    'test_env.env_name': 'polaris_acemath',
+    'test_env.enable_thinking': 1,
+    'test_env.prompt_length': 2048,
+    'test_env.tokens_per_action': 8192,
+    'test_env.num_tasks': 32,
+    'test_sampling.inference_batch_per_device': 1,
+    'test_sampling.tp_size': 4,
+}

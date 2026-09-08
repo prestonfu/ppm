@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lmpo"
+version = "0.2.0"
+description = "Language Model Policy Optimization in JAX"
+readme = "README.md"
+requires-python = "==3.10.*"
+dependencies = [
+    "absl-py==2.3.1",
+    "antlr4-python3-runtime==4.9.3",
+    "chex==0.1.89",
+    "datasets==4.4.1",
+    "einops==0.8.1",
+    "flax==0.10.6",
+    "huggingface-hub==0.36.0",
+    "jax==0.6.2",
+    "jaxlib==0.6.2",
+    "ml-collections==1.1.0",
+    "ml-dtypes==0.5.3",
+    "numpy==2.1.3",
+    "omegaconf==2.3.0",
+    "opt-einsum==3.4.0",
+    "optax==0.2.5",
+    "orbax-checkpoint==0.11.28",
+    "pylatexenc==2.10",
+    "pytest==9.0.3",
+    "python-dotenv==1.2.2",
+    "reasoning-gym==0.1.25",
+    "requests==2.32.5",
+    "ruff==0.15.14",
+    "safetensors==0.6.2",
+    "scipy==1.13.0",
+    "sympy==1.14.0",
+    "tenacity==9.1.2",
+    "tensorflow==2.19.1; platform_system == 'Linux'",
+    "tqdm==4.67.1",
+    "transformers==4.57.1",
+    "wandb==0.23.0",
+]
+
+[project.optional-dependencies]
+tpu = [
+    "jax[tpu]==0.6.2",
+    "tpu_pod_commander==0.1.7",
+]
+gpu = [
+    "jax[cuda12]==0.6.2",
+    "triton==3.2.0; platform_system == 'Linux' and platform_machine == 'x86_64'",
+]
+
+[tool.setuptools]
+package-dir = { lmpo = "." }
+packages = [
+    "lmpo",
+    "lmpo.core",
+    "lmpo.core.metrics",
+    "lmpo.envs",
+    "lmpo.models",
+    "lmpo.models.flash_attention_triton",
+    "lmpo.scripts",
+    "lmpo.scripts.data",
+    "lmpo.scripts.experiments",
+    "lmpo.scripts.rubrics",
+    "lmpo.utils",
+]

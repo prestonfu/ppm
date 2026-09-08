@@ -1,0 +1,28 @@
+ENTRYPOINT = 'lmpo.core.grpo'
+
+CONFIG = {
+    'wandb_name': 'verifree',
+    'model_dir': '/gcs/jaxconverted/Qwen3-4B/',
+    'env.env_name': 'gsm_infinite_hard',
+    'env.enable_thinking': 0,
+    'env.prompt_length': 2048,
+    'env.tokens_per_action': 4096,
+    'env.force_answer_at': -1,
+    'env.n_ops': 24,
+    'sampling.inference_batch_per_device': 16,
+    'train.group_size': 8,
+    'train.groups_per_batch': 8,
+    'train.ppo_minibatch': 64,
+    'train.ppo_microbatch': 16,
+    'train.logprob_minibatch': 64,
+    'train.logit_chunks': 8,
+    'train.lr': 1e-6,
+    'train.do_global_normalization': 1,
+    'train.do_length_filter': 1,
+    'train.do_mask_inference_ratio': 1,
+    'train.do_mask_zero_advantages': 1,
+    'train.do_std_normalization': 0,
+    'reward.weights.env': 1.0,
+    'reward.weights.verifree': 1.0,
+    'reward.metrics.verifree.inference_batch_per_device': 1,
+}

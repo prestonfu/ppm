@@ -1,0 +1,32 @@
+# Python caches / build outputs
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+
+# Local environments / editors
+.env
+.venv/
+venv/
+.vscode/
+.idea/
+.claude/
+
+# Runtime artifacts
+wandb/
+.tmp_wandb/
+profile/
+outputs/
+datasets/
+*.npz
+
+# Generated artifacts
+*.png
+*.pdf
+*.csv
+*.jsonl
