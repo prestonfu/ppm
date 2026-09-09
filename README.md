@@ -112,3 +112,17 @@ We highlight the Huggingface datasets from `envs/`:
 - [GSM Infinite, n=24](https://huggingface.co/datasets/prestonfu/gsm_infinite_hard_r0.4_ops24)
 - [Polaris](https://huggingface.co/datasets/prestonfu/polaris-acemath-gemini-rubrics-v2)
 - [POPE-hard](https://huggingface.co/datasets/kvfrans/POPE-HARD-w-oracle-solution-gemini-rubric)
+
+## Citation
+
+```bibtex
+@misc{fu2026longhorizonlanguagemodelreinforcement,
+      title={Long-Horizon Language Model Reinforcement Learning via Progressive Point Matching}, 
+      author={Preston Fu and Kevin Frans and Oleh Rybkin and Sergey Levine and Aviral Kumar},
+      year={2026},
+      eprint={2609.07303},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2609.07303}, 
+}
+```
